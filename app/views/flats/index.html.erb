@@ -1,0 +1,12 @@
+<div class="navbar">
+  <p>Simple Airbnb</p>
+  <%= link_to 'Add Flat', new_flat_path, class: "btn btn-primary" %>
+</div>
+
+<h1> All our Flats (<%= Flat.count %>)</h1>
+
+<ul>
+  <% @flats.each do |flat| %>
+    <li><%= flat.name %></li>
+  <% end %>
+</ul>
